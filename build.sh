@@ -13,6 +13,6 @@ do
 	for j in {0..127}
 	do
 		soundfont2mp3 -i $i -n $j -g 1 -s "$SOUNDFONT" -o "$BASE_FOLDER/channel/0/instrument/$i/$j.mp3"
-		node ./audio-jsonp.js -n "soundfont_0_$i_$j" -e "mp3" "$BASE_FOLDER/channel/0/instrument/$i/$j.mp3" > "$BASE_FOLDER/channel/0/instrument/$i/$j.js"
+		node ./audio-jsonp.js -n "soundfont_0_${i}_${j}" -e "mp3" "$BASE_FOLDER/channel/0/instrument/$i/$j.mp3" > "$BASE_FOLDER/channel/0/instrument/$i/$j.js"
 	done
 done
